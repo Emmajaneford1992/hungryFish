@@ -1,19 +1,8 @@
-import { render } from 'preact';
 
-import preactLogo from './assets/preact.svg';
+import { h, render } from 'preact';
 import './style.css';
-import UI from './ui';
+import UI from './ui.jsx'; // make sure file ends with .jsx
+
+render(<UI />, document.getElementById('app'));
 
 
-export function App() {
-	return (
-		<div class="container">
-			<UI/>
-
-		</div>
-	);
-}
-
-
-
-render(<App />, document.getElementById('app'));
