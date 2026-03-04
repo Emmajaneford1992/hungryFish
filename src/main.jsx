@@ -1,8 +1,14 @@
-
 import { h, render } from 'preact';
 import './style.css';
-import UI from './ui.jsx'; // make sure file ends with .jsx
+import UI from './ui.jsx'; // make sure this is your UI component
 
-render(<UI />, document.getElementById('app'));
+// Optional App wrapper if you want to keep the <App /> container
+export function App() {
+  return (
+    <div className="container">
+      <UI />
+    </div>
+  );
+}
 
-
+render(<App />, document.getElementById('app'));
