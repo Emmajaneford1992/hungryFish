@@ -39,7 +39,7 @@ class UI extends Component {
         const { money } = this.state;
         return (
             <>
-                <section className="UI">
+                {/* <section className="UI">
                     <div className="shop">
                         <button className="guppy" onClick={this.handleGuppyButton}>
                             <img src="" />
@@ -68,7 +68,7 @@ class UI extends Component {
                             <button className="pauseButton">||</button>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <Game
                     className="game"
                     ref={(el) => { this.$game = el; }}

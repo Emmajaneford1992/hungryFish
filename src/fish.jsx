@@ -31,7 +31,7 @@ export default class Fish {
         this.clock = new THREE.Clock();
         this.elapsed = 0;
         this.duration = 4000;
-        this.money;
+        //this.money;
 
         this.count = 0;
 
@@ -75,14 +75,14 @@ export default class Fish {
             
             this.numOfMoves = this.fish.position.distanceTo(this.destination)/this.speed;
 
-            this.money = new Money({scene: this.scene, camera: this.camera, props: this.props});
-            this.money.reset(this.fish.position.x, this.fish.position.y);
+            //this.money = new Money({scene: this.scene, camera: this.camera, props: this.props});
+            //this.money.reset(this.fish.position.x, this.fish.position.y);
 
             this.setColour();
             setTimeout(() => {
                 this.isHungry = true;
                 this.setColour();
-            }, 1200);
+            }, 3000);
 
         }); 
     } 
@@ -129,7 +129,7 @@ export default class Fish {
                         setTimeout(() => {
                             this.isHungry = true;
                             this.setColour();
-                        }, 1200);
+                        }, 3000);
                     }
                 }
             }
@@ -149,7 +149,7 @@ export default class Fish {
                 this.count = 0;
 
             }
-            this.money.update();
+            //this.money.update();
         }
     }
 
