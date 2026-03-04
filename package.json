@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"type": "module",
-	"homepage": "https://emmajaneford1992.github.io//hungryFish",
+	"homepage": "https://emmajaneford1992.github.io/hungryFish",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
