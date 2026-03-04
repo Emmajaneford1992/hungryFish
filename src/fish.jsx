@@ -41,7 +41,6 @@ export default class Fish {
     }
 
     create(){
-        //console.log('CREATE FISH PROPS', this.props?.state?.numOfFish);
         const modelSrc = new URL("./assets/models/fish.glb", import.meta.url).href;
         const loader = new GLTFLoader();
        
@@ -56,7 +55,6 @@ export default class Fish {
         // this.scene.add(this.fish);
 
         loader.load(modelSrc, (gltf) => {
-            console.log(gltf);
             this.fish = gltf.scene;
             //this.fish.position.set(this.getRandomPos(-width/2, width/2), this.getRandomPos(-height/2, height/2), 0);
             
@@ -76,8 +74,6 @@ export default class Fish {
          
             
             this.numOfMoves = this.fish.position.distanceTo(this.destination)/this.speed;
-            console.log(this.numOfMoves);
-            console.log('create', this.numOfMoves, this.destination.x, this.fish.position.x, this.destination.y, this.fish.position.y  );
 
             this.money = new Money({scene: this.scene, camera: this.camera, props: this.props});
             this.money.reset(this.fish.position.x, this.fish.position.y);
@@ -108,11 +104,9 @@ export default class Fish {
                 let closestFood = 0;
                 let smallestDistance = width; // change later
                 this.props.food.forEach((food, index) => {
-                    console.log (index, this.fish.position.distanceTo(food.food.position), smallestDistance)
                     if(this.fish.position.distanceTo(food.food.position) < smallestDistance && food.showing){
                         closestFood = index;
                         smallestDistance = this.fish.position.distanceTo(food.food.position);
-                        //console.log (closestFood,  smallestDistance)
                     }
 
                 })
