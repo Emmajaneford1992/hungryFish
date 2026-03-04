@@ -1,17 +1,21 @@
 {
 	"private": true,
 	"type": "module",
+	"homepage": "https://emmajaneford1992.github.io//hungryFish",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
-		"preact": "^10.26.9",
+		"preact": "^10.28.4",
 		"three": "^0.182.0"
 	},
 	"devDependencies": {
-		"@preact/preset-vite": "^2.10.2",
+		"@preact/preset-vite": "^2.10.3",
+		"gh-pages": "^6.3.0",
 		"vite": "^7.0.4"
 	}
 }
